@@ -14,8 +14,7 @@ import {
 } from 'uniswap/src/features/chains/types'
 import { Platform } from 'uniswap/src/features/platforms/types/Platform'
 import { ElementName } from 'uniswap/src/features/telemetry/constants'
-// TODO: Add stablecoin addresses when deployed on LightLink
-// import { buildUSDC } from 'uniswap/src/features/tokens/stablecoin'
+import { buildUSDC } from 'uniswap/src/features/tokens/stablecoin'
 
 // LightLink Mainnet base chain definition (not in wagmi/chains)
 const lightlinkChain = {
@@ -36,10 +35,10 @@ const lightlinkChain = {
   testnet: false,
 }
 
-// TODO: Add stablecoin tokens when deployed
+// LightLink stablecoins
 const tokens = buildChainTokens({
   stables: {
-    // USDC: buildUSDC('0x...', UniverseChainId.LightLink),
+    USDC: buildUSDC('0xbCF8C1B03bBDDA88D579330BDF236B58F8bb2cFd', UniverseChainId.LightLink),
   },
 })
 
