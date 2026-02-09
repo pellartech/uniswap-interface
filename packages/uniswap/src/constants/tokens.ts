@@ -78,6 +78,36 @@ export const ETH_BSC = new Token(
 
 export const BUSD_BSC = new Token(UniverseChainId.Bnb, '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56', 18, 'BUSD', 'BUSD')
 
+// LightLink tokens
+export const USDC_LIGHTLINK = new Token(
+  UniverseChainId.LightLink,
+  '0x18fB38404DADee1727Be4b805c5b242B5413Fa40',
+  6,
+  'USDC',
+  'USD Coin',
+)
+export const USDCe_LIGHTLINK = new Token(
+  UniverseChainId.LightLink,
+  '0xbCF8C1B03bBDDA88D579330BDF236B58F8bb2cFd',
+  6,
+  'USDCe',
+  'Bridged USDC (Stargate)',
+)
+export const USDT_LIGHTLINK = new Token(
+  UniverseChainId.LightLink,
+  '0x808d7c71ad2ba3FA531b068a2417C63106BC0949',
+  6,
+  'USDT',
+  'Tether USD',
+)
+export const LL_TOKEN = new Token(
+  UniverseChainId.LightLink,
+  '0x519d3443cacc61bd844546edaea48e5502021802',
+  18,
+  'LL',
+  'LightLink',
+)
+
 export const DAI_BSC = new Token(UniverseChainId.Bnb, '0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3', 18, 'DAI', 'DAI')
 
 export const { DAI: DAI_POLYGON } = POLYGON_CHAIN_INFO.tokens
@@ -277,6 +307,13 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId: number]: Token | undefined } =
     18,
     'WMON',
     'Wrapped Monad',
+  ),
+  [UniverseChainId.LightLink]: new Token(
+    UniverseChainId.LightLink,
+    '0x7ebef2a4b1b09381ec5b9df8c5c6f2dbeca59c73',
+    18,
+    'WETH',
+    'Wrapped Ether',
   ),
   [UniverseChainId.Optimism]: new Token(
     UniverseChainId.Optimism,
