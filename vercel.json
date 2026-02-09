@@ -1,5 +1,5 @@
 {
-  "buildCommand": "cd apps/web && bun run build:production",
+  "buildCommand": "npx nx build:production web",
   "outputDirectory": "apps/web/build",
   "installCommand": "bun install",
   "framework": "vite",
