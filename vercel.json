@@ -1,5 +1,5 @@
 {
-  "buildCommand": "bun run build:production",
+  "buildCommand": "cd apps/web && bun run build:production",
   "outputDirectory": "apps/web/build",
   "installCommand": "bun install",
   "framework": "vite",
