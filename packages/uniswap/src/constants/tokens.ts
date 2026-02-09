@@ -81,7 +81,7 @@ export const BUSD_BSC = new Token(UniverseChainId.Bnb, '0xe9e7CEA3DedcA5984780Ba
 // LightLink tokens
 export const USDC_LIGHTLINK = new Token(
   UniverseChainId.LightLink,
-  '0x18fB38404DADee1727Be4b805c5b242B5413Fa40',
+  '0x18fB38404DADeE1727Be4b805c5b242B5413Fa40',
   6,
   'USDC',
   'USD Coin',
@@ -102,7 +102,7 @@ export const USDT_LIGHTLINK = new Token(
 )
 export const LL_TOKEN = new Token(
   UniverseChainId.LightLink,
-  '0x519d3443cacc61bd844546edaea48e5502021802',
+  '0x519d3443cACc61bD844546eDAea48E5502021802',
   18,
   'LL',
   'LightLink',
@@ -310,7 +310,7 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId: number]: Token | undefined } =
   ),
   [UniverseChainId.LightLink]: new Token(
     UniverseChainId.LightLink,
-    '0x7ebef2a4b1b09381ec5b9df8c5c6f2dbeca59c73',
+    '0x7EbeF2A4b1B09381Ec5B9dF8C5c6f2dBECA59c73',
     18,
     'WETH',
     'Wrapped Ether',
