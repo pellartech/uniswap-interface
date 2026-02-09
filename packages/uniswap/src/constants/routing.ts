@@ -46,6 +46,10 @@ import {
   WETH_AVALANCHE,
   WETH_POLYGON,
   WRAPPED_NATIVE_CURRENCY,
+  USDC_LIGHTLINK,
+  USDCe_LIGHTLINK,
+  USDT_LIGHTLINK,
+  LL_TOKEN,
 } from 'uniswap/src/constants/tokens'
 import { getChainInfo } from 'uniswap/src/features/chains/chainInfo'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
@@ -108,6 +112,15 @@ export const COMMON_BASES: ChainCurrencyList = {
   ),
 
   [UniverseChainId.Celo]: [nativeOnChain(UniverseChainId.Celo), USDC_CELO].map(buildPartialCurrencyInfo),
+
+  [UniverseChainId.LightLink]: [
+    nativeOnChain(UniverseChainId.LightLink),
+    WRAPPED_NATIVE_CURRENCY[UniverseChainId.LightLink] as Token,
+    USDC_LIGHTLINK,
+    USDCe_LIGHTLINK,
+    USDT_LIGHTLINK,
+    LL_TOKEN,
+  ].map(buildPartialCurrencyInfo),
 
   [UniverseChainId.Monad]: [
     nativeOnChain(UniverseChainId.Monad),

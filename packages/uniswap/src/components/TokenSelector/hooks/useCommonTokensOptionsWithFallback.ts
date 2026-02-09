@@ -32,7 +32,7 @@ export function useCommonTokensOptionsWithFallback({
     portfolioBalancesById: {},
   })
 
-  const shouldFallback = data?.length === 0 && commonBases?.length
+  const shouldFallback = (!data || data.length === 0) && commonBases?.length
 
   return useMemo(
     () => ({
