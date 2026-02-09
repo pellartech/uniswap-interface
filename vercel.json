@@ -1,6 +1,6 @@
 {
   "buildCommand": "npx nx build:production web",
-  "outputDirectory": "apps/web/build",
+  "outputDirectory": "build",
   "installCommand": "bun install",
   "framework": "vite",
   "rewrites": [
