@@ -1,6 +1,6 @@
 {
   "buildCommand": "npx nx build:production web",
-  "outputDirectory": "apps/web/build",
+  "outputDirectory": "apps/web/build/client",
   "installCommand": "bun install",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
