@@ -4,6 +4,7 @@ import { BASE_CHAIN_INFO } from 'uniswap/src/features/chains/evm/info/base'
 import { BLAST_CHAIN_INFO } from 'uniswap/src/features/chains/evm/info/blast'
 import { BNB_CHAIN_INFO } from 'uniswap/src/features/chains/evm/info/bnb'
 import { CELO_CHAIN_INFO } from 'uniswap/src/features/chains/evm/info/celo'
+import { LIGHTLINK_CHAIN_INFO } from 'uniswap/src/features/chains/evm/info/lightlink'
 import { MAINNET_CHAIN_INFO, SEPOLIA_CHAIN_INFO } from 'uniswap/src/features/chains/evm/info/mainnet'
 import { MONAD_CHAIN_INFO } from 'uniswap/src/features/chains/evm/info/monad'
 import { OPTIMISM_CHAIN_INFO } from 'uniswap/src/features/chains/evm/info/optimism'
@@ -23,6 +24,7 @@ export function getChainInfo(chainId: UniverseChainId): UniverseChainInfo {
 }
 
 export const ORDERED_CHAINS = [
+  LIGHTLINK_CHAIN_INFO, // LightLink first for this deployment
   MAINNET_CHAIN_INFO,
   UNICHAIN_CHAIN_INFO,
   MONAD_CHAIN_INFO,
@@ -69,6 +71,7 @@ type AllChainsMap = {
 
 export const UNIVERSE_CHAIN_INFO = {
   // MAINNETS
+  [UniverseChainId.LightLink]: LIGHTLINK_CHAIN_INFO,
   [UniverseChainId.Mainnet]: MAINNET_CHAIN_INFO,
   [UniverseChainId.Unichain]: UNICHAIN_CHAIN_INFO,
   [UniverseChainId.Polygon]: POLYGON_CHAIN_INFO,
