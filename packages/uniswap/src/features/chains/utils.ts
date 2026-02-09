@@ -280,7 +280,8 @@ function getDefaultChainId({
     return UniverseChainId.Solana
   }
 
-  return isTestnetModeEnabled ? UniverseChainId.Sepolia : UniverseChainId.Mainnet
+  // Single-chain deployment: LightLink is always the default
+  return UniverseChainId.LightLink
 }
 
 /** Returns all stablecoins for a given chainId. */

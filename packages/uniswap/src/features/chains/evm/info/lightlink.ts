@@ -1,7 +1,5 @@
 import { GraphQLApi } from '@universe/api'
-import { ETH_LOGO } from 'ui/src/assets'
-// TODO: Add LIGHTLINK_LOGO to ui/src/assets and import here
-// import { ETH_LOGO, LIGHTLINK_LOGO } from 'ui/src/assets'
+import { ETH_LOGO, LIGHTLINK_LOGO } from 'ui/src/assets'
 import { DEFAULT_NATIVE_ADDRESS_LEGACY } from 'uniswap/src/features/chains/evm/rpc'
 import { buildChainTokens } from 'uniswap/src/features/chains/evm/tokens'
 import { GENERIC_L2_GAS_CONFIG } from 'uniswap/src/features/chains/gasDefaults'
@@ -65,7 +63,7 @@ export const LIGHTLINK_CHAIN_INFO = {
   openseaName: undefined, // LightLink not on OpenSea
   interfaceName: 'lightlink',
   label: 'LightLink',
-  logo: ETH_LOGO, // TODO: Replace with LIGHTLINK_LOGO
+  logo: LIGHTLINK_LOGO,
   networkLayer: NetworkLayer.L2,
   nativeCurrency: {
     name: 'Ethereum',

@@ -31,11 +31,27 @@ export function createGetFeatureFlaggedChainIds(ctx: {
   getSolanaStatus: () => boolean
 }): () => UniverseChainId[] {
   return () =>
-    // You can use the useFeatureFlag hook here to enable/disable chains based on feature flags.
-    // Example: [ChainId.BLAST]: useFeatureFlag(FeatureFlags.BLAST)
+    // Single-chain deployment: only LightLink is enabled
+    // All other chains are disabled via feature flags
     filterChainIdsByFeatureFlag({
-      [UniverseChainId.Monad]: ctx.getMonadStatus(),
-      [UniverseChainId.Soneium]: ctx.getSoneiumStatus(),
-      [UniverseChainId.Solana]: ctx.getSolanaStatus(),
+      [UniverseChainId.LightLink]: true,
+      [UniverseChainId.Mainnet]: false,
+      [UniverseChainId.Unichain]: false,
+      [UniverseChainId.Polygon]: false,
+      [UniverseChainId.ArbitrumOne]: false,
+      [UniverseChainId.Optimism]: false,
+      [UniverseChainId.Base]: false,
+      [UniverseChainId.Bnb]: false,
+      [UniverseChainId.Blast]: false,
+      [UniverseChainId.Avalanche]: false,
+      [UniverseChainId.Celo]: false,
+      [UniverseChainId.WorldChain]: false,
+      [UniverseChainId.Soneium]: false,
+      [UniverseChainId.Zora]: false,
+      [UniverseChainId.Zksync]: false,
+      [UniverseChainId.Monad]: false,
+      [UniverseChainId.Sepolia]: false,
+      [UniverseChainId.UnichainSepolia]: false,
+      [UniverseChainId.Solana]: false,
     })
 }
