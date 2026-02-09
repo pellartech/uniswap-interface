@@ -34,13 +34,16 @@ export function useCommonTokensOptionsWithFallback({
 
   const shouldFallback = (!data || data.length === 0) && commonBases?.length
 
+  // Use GQL-enriched options if available, otherwise fall back to static COMMON_BASES directly
+  const fallbackData = commonBasesTokenOptions ?? commonBases
+
   return useMemo(
     () => ({
-      data: shouldFallback ? commonBasesTokenOptions : data,
+      data: shouldFallback ? fallbackData : data,
       error: shouldFallback ? undefined : error,
       refetch,
-      loading,
+      loading: shouldFallback ? false : loading,
     }),
-    [commonBasesTokenOptions, data, error, loading, refetch, shouldFallback],
+    [fallbackData, data, error, loading, refetch, shouldFallback],
   )
 }
